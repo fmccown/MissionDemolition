@@ -596,8 +596,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.06093484
+        value: 0.0833323
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d63c0ab6e69b14ab1c264ea28b0e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDist: 1.1
+  minDist: 0.1
 --- !u!1001 &641188276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247231019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: -9.5, z: 0}
+  m_LocalPosition: {x: 38.91, y: -9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2927537082745561427}
@@ -1697,6 +1697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 421450943077433872, guid: 288abe2f9f2c9844181723772b62f56b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 466420483133217965, guid: 288abe2f9f2c9844181723772b62f56b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1958,11 +1962,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843219581}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2025441932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 684474842858912401, guid: af7bb9ea822577c49994aa50a72aebd9, type: 3}
+  m_PrefabInstance: {fileID: 3010549843304399774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2025441933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5125083678556404857, guid: af7bb9ea822577c49994aa50a72aebd9, type: 3}
   m_PrefabInstance: {fileID: 3010549843304399774}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2025441937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025441932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cd9a195be32ea43a39ff78d902714a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2051668625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2043,6 +2064,10 @@ PrefabInstance:
     - target: {fileID: 421450943077433872, guid: 288abe2f9f2c9844181723772b62f56b, type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 421450943077433872, guid: 288abe2f9f2c9844181723772b62f56b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 466420483133217965, guid: 288abe2f9f2c9844181723772b62f56b, type: 3}
       propertyPath: m_LocalPosition.x
