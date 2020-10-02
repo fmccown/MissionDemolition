@@ -22,9 +22,24 @@ public class FollowCam : MonoBehaviour
     // FixedUpdate() is in sync with physics engine. Called 50 times/second
     private void FixedUpdate()
     {
-        if (POI == null) return;
+        Vector3 dest = Vector3.zero;
 
-        Vector3 dest = POI.transform.position;
+        if (POI != null)
+        {
+            // Get position of POI    
+            dest = POI.transform.position;
+
+            if (POI.tag == "Projectile")
+            {
+                // Sleeping means not moving
+                if (POI.GetComponent<Rigidbody>().IsSleeping())
+                {
+                    // Return to default view
+                    POI = null;
+                    return;
+                }
+            }
+        }
 
         // Limit x and y to minimum values
         dest.x = Mathf.Max(minXY.x, dest.x);
