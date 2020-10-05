@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,7 @@ public class MissionDemolition : MonoBehaviour
     public Text uitButton;
     public Vector3 castlePos;
     public GameObject[] castles;
+    public int firstLevel = 1;
 
     [Header("Set Dynamically")]
     public int level;
@@ -31,8 +33,14 @@ public class MissionDemolition : MonoBehaviour
     void Start()
     {
         S = this;
-        level = 0;
         levelMax = castles.Length;
+
+        level = 0;
+        if (firstLevel - 1 < castles.Length)
+        {
+            level = Math.Max(0, firstLevel - 1);
+        }
+
         StartLevel();
     }
 
